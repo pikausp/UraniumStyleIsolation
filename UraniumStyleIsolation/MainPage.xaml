@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:t="clr-namespace:UraniumUI.Theming;assembly=UraniumUI"
+             x:Class="UraniumStyleIsolation.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Red"/>
+        </Style>
+
+        <Style TargetType="material:ButtonView" Class="Cascading">
+            <Setter Property="t:CascadingStyle.Resources">
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor"  Value="Red" />
+                    </Style>
+                </ResourceDictionary>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button StyleClass="FilledButton" Text="Filled Button" />
+
+            <Label Text="Test"/>
+
+            <material:ButtonView StyleClass="Cascading">
+                <Label Text="Test"/>
+            </material:ButtonView>
+
+            <material:ButtonView>
+                <Label Text="Test"/>
+            </material:ButtonView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
