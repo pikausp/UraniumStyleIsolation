@@ -13,7 +13,7 @@
             <Setter Property="t:CascadingStyle.Resources">
                 <ResourceDictionary>
                     <Style TargetType="Label">
-                        <Setter Property="TextColor"  Value="Red" />
+                        <Setter Property="TextColor"  Value="Blue" />
                     </Style>
                 </ResourceDictionary>
             </Setter>
